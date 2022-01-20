@@ -13,6 +13,16 @@ We encode the colors as a set of integers, and the map itself is described by an
 
 The constraint satisfaction problem is the following :
 
-The set of parameters X = {IT, CH, DE, PL, CZ, SK, HU, AT, SL) encodes 9 countries by their european code (2 letters). For every variable x from the set X, the field D[x] = {1,2,3,4,5,6,7,8,9} encodes 9 colors we want to attribute to every country.
+The set of parameters X is 
+
+<img src="https://latex.codecogs.com/svg.image?X&space;=&space;\left\{&space;IT,&space;CH,&space;DE,&space;PL,&space;CZ,&space;SK,&space;HU,&space;AT,&space;SL&space;\right\}" title="X = \left\{ IT, CH, DE, PL, CZ, SK, HU, AT, SL \right\}" />
+
+It encodes 9 countries by their european code (2 letters).
+For every variable x from the set X, the field is
+
+<img src="https://latex.codecogs.com/svg.image?D[x]&space;=&space;\left\{&space;&space;1,2,3,4,5,6,7,8,9&space;\right\}&space;" title="D[x] = \left\{ 1,2,3,4,5,6,7,8,9 \right\} " />
+
+Which encodes 9 colors we want to attribute to every country.
 The constraint on countries which share a border is to have different colors, which can be described as the following constraints set C :
-C = {{IT <> CH}, {IT <> AT}, {IT <> SL}, {CH <> AT}, {CH <> DE}, {AT <> DE}, {AT <> SL}, {AT <> CZ}, {AT <> HU}, {AT <> SK}, {DE <> CZ}, {DE <> PL}, {PL <> CZ}, {PL <> SK}, {CZ <> SK}, {SK <> HU}, {HU <> SL}}
+
+<img src="https://latex.codecogs.com/svg.image?C&space;=&space;\left\{\left\{IT&space;<>&space;CH\right\},&space;\left\{IT&space;<>&space;AT\right\},&space;\left\{IT&space;<>&space;SL\right\},&space;\left\{CH&space;<>&space;AT\right\},&space;\left\{CH&space;<>&space;DE\right\},&space;\left\{AT&space;<>&space;DE\right\},&space;\left\{AT&space;<>&space;SL\right\},&space;\left\{AT&space;<>&space;CZ\right\},&space;\left\{AT&space;<>&space;HU\right\},&space;\left\{AT&space;<>&space;SK\right\},&space;\left\{DE&space;<>&space;CZ\right\},&space;\left\{DE&space;<>&space;PL\right\},&space;\left\{PL&space;<>&space;CZ\right\},&space;\left\{PL&space;<>&space;SK\right\},&space;\left\{CZ&space;<>&space;SK\right\},&space;\left\{SK&space;<>&space;HU\right\},&space;\left\{HU&space;<>&space;SL\right\}\right\}" title="C = \left\{\left\{IT <> CH\right\}, \left\{IT <> AT\right\}, \left\{IT <> SL\right\}, \left\{CH <> AT\right\}, \left\{CH <> DE\right\}, \left\{AT <> DE\right\}, \left\{AT <> SL\right\}, \left\{AT <> CZ\right\}, \left\{AT <> HU\right\}, \left\{AT <> SK\right\}, \left\{DE <> CZ\right\}, \left\{DE <> PL\right\}, \left\{PL <> CZ\right\}, \left\{PL <> SK\right\}, \left\{CZ <> SK\right\}, \left\{SK <> HU\right\}, \left\{HU <> SL\right\}\right\}" />
